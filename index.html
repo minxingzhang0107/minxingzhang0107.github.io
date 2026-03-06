@@ -68,9 +68,9 @@
     /* HERO */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 160px;
+      grid-template-columns: 1fr 180px;
       gap: 3rem;
-      align-items: center;
+      align-items: start;
       padding: 4rem 0 3rem;
       border-bottom: 1px solid var(--rule);
       scroll-margin-top: 56px;
@@ -113,26 +113,28 @@
 
     /* PHOTO */
     .hero-photo {
-      width: 155px; height: 155px;
+      width: 175px; height: 175px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 10%;
       box-shadow: 0 4px 24px rgba(0,0,0,0.10);
       border: 4px solid var(--surface);
       outline: 1px solid var(--rule);
+      margin-top: 0.5rem;
     }
 
     /* CONTACT */
     .contact-bar {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      display: flex; flex-wrap: nowrap; gap: 0.5rem;
       margin-top: 1.2rem;
     }
     .contact-bar a {
-      display: flex; align-items: center; gap: 0.4rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
       font-size: 0.8rem;
       font-weight: 400;
       color: var(--muted);
       text-decoration: none;
+      white-space: nowrap;
       background: var(--surface);
       border: 1px solid var(--rule);
       border-radius: 6px;
@@ -323,13 +325,10 @@
         as well as privacy-preserving model performance estimation.
       </p>
 
-      <p class="bio" style="margin-top:0.9rem; color:var(--muted); font-style:italic;">I am open to research collaborations and internship opportunities.</p>
+      <p class="bio" style="margin-top:0.9rem; color:var(--muted); font-style:italic;">I am open to research collaborations and internship opportunities. I have always believed that words are the gentlest way to connect — perhaps we are in different cities, looking at different skies, living entirely different lives, but through a single message, we can briefly step into each other&#39;s world. Feel free to reach out. I hope we can be friends.</p>
 
       <div class="contact-bar">
-        <a href="/cdn-cgi/l/email-protection#95f8fcfbedfcfbf2bbeffdf4fbf2d5f1e0fef0bbf0f1e0">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-          <span class="__cf_email__" data-cfemail="74191d1a0c1d1a135a0e1c151a133410011f115a111001">[email&#160;protected]</span>
-        </a>
+        <a href="mailto:minxing.zhang@duke.edu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>minxing.zhang@duke.edu</a>
         <a href="https://www.linkedin.com/in/minxing-zhang-3987b8255/" target="_blank">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
