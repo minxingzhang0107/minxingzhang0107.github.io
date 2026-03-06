@@ -148,6 +148,25 @@
       box-shadow: 0 1px 6px rgba(26,58,92,0.08);
     }
     .contact-bar svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .email-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.8rem; font-weight: 400;
+      color: var(--muted);
+      cursor: pointer;
+      white-space: nowrap;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.28rem 0.65rem;
+      transition: color .15s, border-color .15s, box-shadow .15s;
+      font-family: inherit;
+    }
+    .email-btn:hover {
+      color: var(--accent);
+      border-color: #c5d5e8;
+      box-shadow: 0 1px 6px rgba(26,58,92,0.08);
+    }
+    .email-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
     /* SECTIONS */
     section {
@@ -329,7 +348,7 @@
       <p class="bio" style="margin-top:0.9rem; color:var(--muted); font-style:italic;">I am open to research collaborations and internship opportunities. I have always believed that words are the gentlest way to connect — perhaps we are in different cities, looking at different skies, living entirely different lives, but through a single message, we can briefly step into each other&#39;s world. Feel free to reach out. I hope we can be friends.</p>
 
       <div class="contact-bar">
-        <a href="/cdn-cgi/l/email-protection#187571766071767f36627079767f587c6d737d367d7c6d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg><span class="__cf_email__" data-cfemail="34595d5a4c5d5a531a4e5c555a537450415f511a515041">[email&#160;protected]</span></a>
+        <span class="email-btn" onclick="navigator.clipboard.writeText('minxing.zhang@duke.edu'); var el=this; el.dataset.orig=el.innerHTML; el.innerHTML='✓ Copied!'; setTimeout(function(){el.innerHTML=el.dataset.orig},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>minxing&#46;zhang&#64;duke&#46;edu</span>
         <a href="https://www.linkedin.com/in/minxing-zhang-3987b8255/" target="_blank">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
