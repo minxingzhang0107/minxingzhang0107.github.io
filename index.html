@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="lBNLaWywuos2WYtXMc6ce64CZeRBOI9tuQ0wSgHuJ-w" name="google-site-verification"/>
+<title>Minxing Zhang | Computer Science Ph.D. Candidate, Duke University</title>
+<meta content="Minxing Zhang, Computer Science Ph.D. candidate at Duke University. Privacy, agent generalizability, and LLM evaluation. Seeking Summer/Fall 2027 internships and Spring 2028 full-time opportunities." name="description"/>
+<link href="https://minxingzhang0107.github.io/" rel="canonical"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='5' fill='%23183b56'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-size='32' fill='white'%3EM%3C/text%3E%3C/svg%3E" rel="icon"/>
+<meta content="profile" property="og:type"/>
+<meta content="Minxing Zhang | Duke University" property="og:title"/>
+<meta content="Duke Computer Science Ph.D. candidate working on trustworthy LLMs and AI agents. Internships: Summer/Fall 2027. Full-time: Spring 2028." property="og:description"/>
+<meta content="https://minxingzhang0107.github.io/" property="og:url"/>
+<meta content="https://minxingzhang0107.github.io/portrait.jpg" property="og:image"/>
+<meta content="Minxing Zhang" property="og:image:alt"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Minxing Zhang", "alternateName": "张敏行", "url": "https://minxingzhang0107.github.io/", "jobTitle": "Ph.D. Candidate in Computer Science", "affiliation": {"@type": "CollegeOrUniversity", "name": "Duke University"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Emory University"}, "email": "mailto:minxing.zhang@duke.edu", "sameAs": ["https://scholar.google.com/citations?user=1dUxfIcAAAAJ&hl=en", "https://www.linkedin.com/in/minxing-zhang-3987b8255/"]}</script>
+<meta content="#ffffff" name="theme-color"/><style>/*
+  Minxing Zhang — academic personal website.
+  Design system: one sans-serif family, semantic text roles, a restrained navy accent.
+  Source-informed review: Anthropic frontend-design/webapp-testing,
+  UI UX Pro Max quick-reference, Vercel Web Interface Guidelines, Academic Pages.
+  The existing Minimal Light-inspired profile/content structure is retained.
+  No external JavaScript, font service, analytics, or build step.
+*/
+:root {
+  color-scheme: light;
+  --page: #ffffff;
+  --text: #29333d;
+  --heading: #183b56;
+  --secondary: #58636f;
+  --link: #165a86;
+  --link-hover: #103d5b;
+  --line: #d8e0e6;
+  --line-soft: #e9edf1;
+  --focus: #1a6595;
+  --selection: #e2edf5;
+  --font: Arial, Helvetica, sans-serif;
+  --font-small: .875rem;
+  --font-meta: .9375rem;
+  --font-body: 1.0625rem;
+  --font-entry: 1.125rem;
+  --font-section: 1.375rem;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --content-width: 43.5rem;
+  --profile-width: 14.5rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 0; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--font-body);
+  line-height: 1.66;
+  -webkit-font-smoothing: antialiased;
+}
+p, h1, h2, h3, h4, ul, ol, dl { margin: 0; }
+p, h1, h2, h3, h4, li, dd { overflow-wrap: break-word; }
+h1, h2, h3, h4 { text-wrap: pretty; }
+strong { font-weight: 700; }
+img { max-width: 100%; }
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: #9fb8c9;
+  text-underline-offset: .18em;
+  text-decoration-thickness: 1px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: var(--selection);
+}
+a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
+a:active { color: var(--heading); }
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+:target { scroll-margin-top: 1.5rem; }
+::selection { background: var(--selection); color: var(--heading); }
+sup { font-size: .7em; line-height: 0; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; left: 1rem; top: -6rem; z-index: 20;
+  padding: .5rem .8rem; background: var(--page); border: 1px solid var(--focus);
+}
+.skip-link:focus { top: .5rem; }
+/* A profile column and a controlled reading measure, not a dashboard. */
+.wrapper {
+  width: min(62rem, calc(100% - 4rem));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: var(--profile-width) minmax(0, var(--content-width));
+  column-gap: 4rem;
+  align-items: start;
+  padding-block: var(--space-10) var(--space-8);
+}
+.sidebar, main { min-width: 0; }
+.portrait {
+  display: block; width: 9rem; height: 10rem;
+  object-fit: cover; object-position: center 15%;
+  border-radius: 3px; margin-bottom: 1rem;
+}
+h1 {
+  color: var(--heading); font-size: 1.875rem; font-weight: 700;
+  line-height: 1.22; letter-spacing: -.04rem;
+}
+.chinese-name {
+  color: var(--secondary); font-size: 1.0625rem; font-weight: 400;
+  letter-spacing: .06em; margin: .2rem 0 .65rem;
+}
+.profile-role { font-size: var(--font-meta); line-height: 1.5; }
+.profile-affiliation { margin-top: .5rem; font-size: 1rem; }
+.profile-location { color: var(--secondary); font-size: var(--font-small); }
+.profile-contact { margin-top: .65rem; }
+.profile-email { font-size: var(--font-small); overflow-wrap: anywhere; }
+.profile-email a { display: inline-block; padding-block: .2rem; }
+.profile-links { display: flex; flex-wrap: wrap; gap: .05rem 1rem; }
+.profile-links a { display: inline-block; font-size: var(--font-small); padding-block: .25rem; }
+.profile-links a:first-child { font-weight: 700; }
+.section-nav { margin-top: 1rem; padding-top: .7rem; border-top: 1px solid var(--line); }
+.section-nav ul { list-style: none; padding: 0; display: grid; }
+.section-nav a {
+  display: block; padding: .19rem 0 .19rem .75rem;
+  border-left: 2px solid transparent;
+  color: var(--secondary); font-size: var(--font-small); line-height: 1.65;
+  text-decoration: none;
+}
+.section-nav a:hover { color: var(--link); text-decoration: underline; }
+.section-nav a[aria-current="location"] {
+  color: var(--heading); border-left-color: var(--heading);
+  text-decoration: underline; text-decoration-color: var(--heading);
+}
+main:focus-visible { outline: 2px solid var(--focus); outline-offset: .75rem; }
+h2 {
+  position: relative;
+  color: var(--heading); font-size: var(--font-section); font-weight: 700;
+  line-height: 1.4; letter-spacing: -.012em;
+  padding-bottom: .5rem; margin-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.section-anchor {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.5rem; min-height: 1.5rem; margin-left: .4rem;
+  color: var(--secondary); vertical-align: -.1rem; text-decoration: none;
+  opacity: 0;
+}
+.section-anchor svg { width: .9rem; height: .9rem; fill: none; stroke: currentColor; stroke-width: 1.8; }
+h2:hover .section-anchor, .section-anchor:focus-visible { opacity: 1; }
+.about > p + p { margin-top: .65rem; }
+/* Actual availability: role types have their own dates. */
+.availability {
+  margin-top: 1rem; padding: .2rem 0 .2rem 1rem;
+  border-left: 2px solid var(--heading); font-size: var(--font-meta);
+}
+.availability-intro { margin-bottom: .25rem; }
+.availability-dates { display: grid; gap: .1rem; }
+.availability-dates > div { display: flex; flex-wrap: wrap; gap: 0 .8rem; align-items: baseline; }
+.availability-dates dt { font-weight: 700; flex: 0 0 6.5rem; }
+.availability-dates dd { margin: 0; flex: 1 1 13.5rem; }
+.cv-section { margin-top: var(--space-8); padding-top: 0; }
+.entry + .entry { margin-top: var(--space-6); }
+.entry-heading {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: baseline; gap: .1rem 1rem;
+}
+.entry-heading > :first-child { min-width: 0; }
+h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-height: 1.5; }
+.date { color: var(--secondary); font-size: var(--font-small); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.degree, .job-role { font-size: var(--font-body); line-height: 1.55; }
+.entry-meta { color: var(--secondary); font-size: var(--font-meta); line-height: 1.6; margin-top: .15rem; }
+.entry-meta + .entry-meta { margin-top: .05rem; }
+.company { color: var(--heading); }
+.secondary-row {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: baseline; gap: .1rem 1rem; margin-top: .05rem;
+}
+.submission { color: var(--secondary); font-size: var(--font-small); font-style: italic; }
+.description { margin-top: .6rem; }
+.description p + p { margin-top: .65rem; }
+.work-entry + .work-entry { margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--line-soft); }
+.resource-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem 1.15rem; margin-top: .3rem; }
+.resource-links a { display: inline-block; padding-block: .2rem; font-size: var(--font-small); }
+.project-entry .entry-heading { display: block; }
+.project-entry .date { display: block; margin-top: .1rem; font-style: italic; white-space: normal; }
+.project-entry .description { margin-top: .4rem; }
+.project-entry + .project-entry { margin-top: 1.5rem; }
+.project-heading-link { color: inherit; text-decoration: none; }
+.project-heading-link:hover { color: var(--link); text-decoration: underline; }
+.publication-note, .publication-footer { color: var(--secondary); font-size: var(--font-small); line-height: 1.65; }
+.publication-note { margin-top: -.25rem; margin-bottom: 1rem; }
+.publication-group-title { font-size: 1rem; margin: 1.25rem 0 .9rem; }
+.publication-list { list-style: none; padding: 0; margin: 0; }
+/* Separate number column: wrapped titles and author lines share a left edge. */
+.publication { display: grid; grid-template-columns: 1.65rem minmax(0,1fr); gap: .25rem; margin-bottom: 1.3rem; align-items: baseline; }
+.publication:last-child { margin-bottom: 0; }
+.pub-number { color: var(--secondary); font-size: var(--font-small); font-variant-numeric: tabular-nums; }
+.pub-body { min-width: 0; }
+.publication .entry-heading { display: block; }
+.publication h4 { font-size: 1.0625rem; font-weight: 700; line-height: 1.5; }
+.publication h4 a { color: var(--link); text-decoration: none; }
+.publication h4 a:hover { text-decoration: underline; }
+.authors { font-size: var(--font-meta); line-height: 1.6; margin-top: .18rem; }
+.publication-venue { color: var(--secondary); font-size: var(--font-meta); line-height: 1.6; margin-top: .12rem; }
+.venue-name { color: var(--text); font-style: italic; }
+.pub-year { font-variant-numeric: tabular-nums; }
+.publication .resource-links { margin-top: .1rem; }
+.publication-footer { margin-top: 1rem; }
+.talk-entry + .talk-entry { margin-top: 1.15rem; }
+.talk-title { margin-top: .1rem; }
+.honors-list { list-style: none; padding: 0; }
+.honors-list li { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: baseline; gap: 1rem; padding-block: .3rem; }
+.skills-list { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: .25rem 1.5rem; }
+.skills-list dt { font-weight: 700; }
+.skills-list dd { margin: 0; }
+.contact-address { font-style: normal; }
+.contact-address p + p { margin-top: .2rem; }
+.contact-availability { margin-bottom: .8rem; }
+.footer { margin-top: var(--space-8); padding-top: 1rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .4rem 1rem; font-size: var(--font-small); color: var(--secondary); }
+.footer a { padding-block: .3rem; }
+@media (min-width: 64rem) {
+  .sidebar[data-sticky="true"] { position: sticky; top: 1.5rem; }
+}
+@media (max-width: 63.999rem) {
+  .wrapper { display: block; width: min(43.5rem, calc(100% - 3rem)); padding-top: 2rem; }
+  .profile-card { display: grid; grid-template-columns: minmax(0,1fr) 8rem; gap: .3rem 1.5rem; align-items: start; }
+  .profile-photo { grid-column: 2; grid-row: 1 / span 2; }
+  .portrait { width: 8rem; height: 9rem; margin: 0; }
+  .profile-info { grid-column: 1; grid-row: 1; }
+  .profile-contact { grid-column: 1 / -1; margin-top: .4rem; }
+  .profile-links { gap: 0 1.25rem; }
+  .profile-role { font-size: 1rem; }
+  .section-nav { margin: 1rem 0 1.75rem; padding: .45rem 0; border-block: 1px solid var(--line); }
+  .section-nav ul { display: flex; flex-wrap: wrap; column-gap: 1.15rem; row-gap: .1rem; }
+  .section-nav a { padding: .3rem 0; border-left: 0; min-height: 1.9rem; }
+  .section-nav a[aria-current="location"] { text-decoration-thickness: 2px; }
+}
+@media (max-width: 40rem) {
+  .wrapper { width: calc(100% - 2.5rem); padding-top: 1.5rem; }
+  .profile-card { display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+  .profile-info { order: 0; flex: 1 1 11rem; }
+  .profile-photo { order: 1; flex: 0 0 min(6rem, 24vw); }
+  .profile-contact { order: 2; flex: 0 0 100%; }
+  .portrait { width: 100%; height: auto; aspect-ratio: 6 / 7; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.3125rem; }
+  .profile-role { font-size: .9375rem; }
+  .profile-contact, .profile-email { font-size: .9375rem; }
+  .profile-email a, .profile-links a { padding-block: .4rem; }
+  .profile-links a { font-size: .9375rem; }
+  .cv-section { margin-top: 2rem; padding-top: 0; }
+  .entry-heading { display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: .75rem; }
+  .entry-heading .date { text-align: right; font-size: .84375rem; }
+  .secondary-row { display: block; }
+  .submission { display: block; margin-top: .2rem; }
+  .availability { padding-left: .8rem; }
+  .availability-dates > div { column-gap: .5rem; }
+  .availability-dates dt { flex-basis: 5.75rem; }
+  .skills-list { grid-template-columns: minmax(0,1fr); }
+  .skills-list dd + dt { margin-top: .5rem; }
+  .resource-links { gap: .05rem 1.2rem; }
+  .resource-links a { padding-block: .4rem; }
+  .project-entry .entry-heading, .publication .entry-heading { display: block; }
+  .project-entry .date { text-align: left; font-size: var(--font-small); }
+  .honors-list li { align-items: start; }
+}
+@media (max-width: 23rem) {
+  .wrapper { width: calc(100% - 2rem); }
+  .profile-card { column-gap: .75rem; }
+  .profile-info { flex-basis: 10.5rem; }
+  .profile-photo { flex-basis: min(4.75rem, 24vw); }
+  h1 { font-size: 1.6rem; }
+  .entry-heading { display: block; }
+  .entry-heading .date { text-align: left; }
+  .section-nav ul { column-gap: 1rem; }
+  .availability-dates > div { display: block; }
+  .availability-dates > div + div { margin-top: .4rem; }
+}
+@media (pointer: coarse) {
+  .section-nav a, .resource-links a, .profile-links a, .profile-email a, .footer a { min-height: 2.75rem; display: inline-flex; align-items: center; }
+  .section-nav ul { row-gap: 0; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (forced-colors: active) {
+  .section-nav a[aria-current="location"] { border-color: Highlight; }
+  a:focus-visible { outline-color: Highlight; }
+}
+@media print {
+  @page { margin: 17mm; }
+  body { font-size: 10pt; line-height: 1.5; color: #111; }
+  .wrapper { width: 100%; display: block; padding: 0; }
+  .sidebar { position: static !important; }
+  .profile-card { display: grid; grid-template-columns: 1fr 23mm; gap: 4mm; margin-bottom: 12pt; }
+  .profile-photo { grid-column: 2; grid-row: 1 / span 2; }
+  .profile-info, .profile-contact { grid-column: 1; }
+  .portrait { width: 23mm; height: 27mm; margin: 0; }
+  h1 { font-size: 20pt; }
+  .chinese-name { margin: 2pt 0 4pt; }
+  .profile-role, .profile-affiliation, .profile-email, .profile-links a { font-size: 10pt; }
+  .profile-location, .section-nav, .skip-link, .footer, .section-anchor { display: none; }
+  h2 { font-size: 13pt; margin-bottom: 8pt; break-after: avoid; }
+  h3, h4, .entry-heading, .secondary-row { break-after: avoid; }
+  .cv-section { margin-top: 13pt; padding-top: 0; }
+  .degree, .job-role, .entry-meta, .authors, .publication-venue, .resource-links a, .availability { font-size: 10pt; }
+  .publication { grid-template-columns: 15pt 1fr; }
+  .publication, .honors-list li, .talk-entry, .project-entry, .education-entry { break-inside: avoid; }
+  p { widows: 3; orphans: 3; }
+  a { color: #111; text-decoration: none; }
+}
+</style><meta content="Minxing Zhang | Duke University" name="twitter:title"/><meta content="Duke Computer Science Ph.D. candidate working on trustworthy LLMs and AI agents. Internships: Summer/Fall 2027. Full-time: Spring 2028." name="twitter:description"/></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrapper">
+<aside aria-label="Profile and section navigation" class="sidebar">
+<header class="profile-card">
+<div class="profile-photo"><img alt="Minxing Zhang" class="portrait" decoding="async" fetchpriority="high" height="400" src="portrait.jpg" width="400"/></div>
+<div class="profile-info">
+<h1 translate="no">Minxing Zhang</h1>
+<p class="chinese-name" lang="zh" translate="no">张敏行</p>
+<p class="profile-role">Fourth-Year Ph.D. Candidate<br/>Computer Science</p>
+<p class="profile-affiliation">Duke University</p>
+<p class="profile-location">Durham, North Carolina</p>
+
+
+</div>
+<div class="profile-contact"><p class="profile-email" translate="no"><a href="mailto:minxing.zhang@duke.edu">minxing.zhang@duke.edu</a></p><div class="profile-links"><a href="Minxing_Zhang_CV.pdf">CV (PDF)</a><a href="https://scholar.google.com/citations?user=1dUxfIcAAAAJ&amp;hl=en">Google Scholar</a><a href="https://www.linkedin.com/in/minxing-zhang-3987b8255/">LinkedIn</a></div></div></header>
+<nav aria-label="Page sections" class="section-nav"><ul><li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#experience">Experience</a></li><li><a href="#research">Projects</a></li><li><a href="#publications">Publications</a></li><li><a href="#talks">Talks</a></li><li><a href="#awards">Honors</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+</aside>
+<main id="main" tabindex="-1">
+<section aria-labelledby="about-title" class="about" id="about"><h2 id="about-title">About<a aria-label="Link to About" class="section-anchor" href="#about"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<p>I work with <a href="https://sites.google.com/view/jpei/jian-peis-homepage">Jian Pei</a> at Duke University. My research centers on <strong>privacy, generalizability, and reliable, cost-efficient evaluation</strong> for trustworthy LLMs and AI agents.</p>
+<p>My recent work explores reliable person distillation and representation, advertising for LLM agents, and question-asking LLMs.</p>
+<div aria-label="Job-search availability" class="availability">
+<p class="availability-intro">I am actively seeking:</p>
+<dl class="availability-dates">
+<div><dt>Internships</dt><dd>Summer 2027 and Fall 2027</dd></div>
+<div><dt>Full-time</dt><dd>Spring 2028</dd></div>
+</dl></div></section>
+<section aria-labelledby="education-title" class="cv-section" id="education">
+<h2 id="education-title">Education<a aria-label="Link to Education" class="section-anchor" href="#education"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<article class="entry education-entry">
+<div class="entry-heading"><h3>Duke University</h3><span class="date">2023–Present</span></div>
+<p class="degree">Ph.D. in Computer Science</p>
+<p class="entry-meta">Durham, NC · Adviser: <a href="https://sites.google.com/view/jpei/jian-peis-homepage">Jian Pei</a></p>
+</article>
+<article class="entry education-entry">
+<div class="entry-heading"><h3>Emory University</h3><span class="date">2019–2022</span></div>
+<p class="degree">B.S. in Computer Science and Applied Mathematics &amp; Statistics</p>
+<p class="entry-meta">Atlanta, GA · GPA: 3.984/4.00 · Highest Honor</p>
+<p class="entry-meta">Advisers: <a href="https://www.cs.emory.edu/~lxiong/">Li Xiong</a> and <a href="https://cs.emory.edu/~lzhao41/">Liang Zhao</a></p>
+</article>
+</section>
+<section aria-labelledby="experience-title" class="cv-section" id="experience">
+<h2 id="experience-title">Work and Internship Experience<a aria-label="Link to Work and Internship Experience" class="section-anchor" href="#experience"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<article class="entry work-entry" id="aws">
+<div class="entry-heading"><h3 class="company">Amazon Web Services</h3><span class="date">Summer 2026</span></div>
+<div class="secondary-row"><p class="job-role">Applied Scientist Intern</p><span class="submission">Research paper in submission</span></div>
+<p class="entry-meta">Amazon Bedrock Guardrails · Deep Engine-Science · Seattle, WA</p>
+<div class="description">
+<p>I developed <strong>Judge2Vec</strong>, an unsupervised framework that selects compact, complementary LLM juries without human labels for selection. It estimates criterion-specific competence embeddings from leave-one-family-out agreement with a family-balanced consensus on unlabeled pilot examples.</p>
+<p>Using 4 of 19 judges, Judge2Vec ranked first among evaluated methods on 8 text benchmarks. Across 4 human-rated benchmarks, mean Kendall correlation was <strong>0.467 versus 0.424</strong> for full-pool PoLL, with <strong>83.9% lower average deployment cost</strong> ($4.67 versus $28.97 per 1,000 items).</p>
+<p>I also developed budget-adaptive jury replacement and zero-shot cross-task transfer. Juries constructed without target-task examples retained 98.5% of in-domain mean Kendall correlation across 4 tasks. Evaluation also included multimodal and agentic settings.</p>
+</div>
+</article>
+<article class="entry work-entry" id="att">
+<div class="entry-heading"><h3 class="company">AT&amp;T Chief Data Office</h3><span class="date">Summer 2025</span></div>
+<div class="secondary-row"><p class="job-role">Graduate Research Intern</p><span class="submission">Research paper in submission</span></div>
+<p class="entry-meta">Bedminster, NJ · Mentors: <a href="https://divesh.net">Divesh Srivastava</a> and <a href="https://www.linkedin.com/in/yaron-kanza-27897642/">Yaron Kanza</a></p>
+<div class="description">
+<p>I developed a kNN-LM framework for private-data question answering and <strong>selective forgetting without retraining the LLM or embedding function</strong>. The embedding design preserves accurate next-token retrieval while protecting against leakage of deleted private associations. Sensitive values are masked during embedding training; correct next tokens remain retrievable from the private database until deletion.</p>
+<p>The framework achieved <strong>73.8% answer accuracy versus 60.0%</strong> for QA-embedding RAG on paraphrased TOFU questions, evaluated against ground truth by GPT-4o-mini.</p>
+<p>I implemented FAISS retrieval and user-level logical deletion without index rebuilds. Scaling the synthetic datastore 1,000 times to <strong>19.6 million key–value pairs</strong> increased answer-generation time 4.9 times, from 1.42 to 7.01 seconds per query.</p>
+</div>
+</article>
+<article class="entry work-entry" id="datathink">
+<div class="entry-heading"><h3 class="company">Microsoft &amp; Emory University</h3><span class="date">Summer 2022</span></div>
+<p class="job-role">DataThink Research Project</p>
+<p class="entry-meta">Atlanta, GA</p>
+<div class="description"><p>I built XGBoost rental-price prediction and SKATER spatial clustering models to analyze metro Atlanta’s rental market.</p></div>
+</article>
+</section>
+<section aria-labelledby="research-title" class="cv-section" id="research">
+<h2 id="research-title">Selected Research Projects<a aria-label="Link to Selected Research Projects" class="section-anchor" href="#research"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<article class="entry project-entry" id="project-person">
+<div class="entry-heading"><h3><a class="project-heading-link" href="https://doi.org/10.20944/preprints202608.1530.v1">Person distillation</a></h3><span class="date">Preprint · 2026</span></div>
+<div class="description"><p>I formulated person distillation as modeling an individual’s knowledge, judgment, and behavior from heterogeneous personal traces. The work establishes a lifecycle taxonomy covering source evidence, person representations, distillation methods, and evaluation, together with a framework for evaluating person-specific fidelity and evidence grounding.</p></div>
+<div class="resource-links"><a aria-label="Paper: Person distillation" href="https://doi.org/10.20944/preprints202608.1530.v1">Paper</a><a aria-label="Website: Person distillation" href="https://person-distillation-foundations.github.io/">Website</a><a aria-label="GitHub (website source): Person distillation" href="https://github.com/person-distillation-foundations/person-distillation-foundations.github.io">GitHub (website source)</a></div>
+</article>
+<article class="entry project-entry" id="project-generalizability">
+<div class="entry-heading"><h3><a class="project-heading-link" href="https://doi.org/10.1145/3794858">LLM-based agent generalizability</a></h3><span class="date">ACM Computing Surveys · 2026</span></div>
+<div class="description"><p>I defined agent generalizability across instructions, tasks, environments, and domains, and organized evaluation and improvement methods by the backbone LLM, specialized components, and their interactions. The survey distinguishes frameworks that can be adapted to different settings from agents that generalize beyond their fine-tuning data.</p></div>
+<div class="resource-links"><a aria-label="Paper: LLM-based agent generalizability" href="https://doi.org/10.1145/3794858">Paper</a><a aria-label="Related tutorial: LLM-based agent generalizability" href="#talk-pakdd">Related tutorial</a></div>
+</article>
+<article class="entry project-entry" id="project-mpceval">
+<div class="entry-heading"><h3><a class="project-heading-link" href="https://doi.org/10.1145/3770855.3817574">MPCEval: Multi-party conversation evaluation</a></h3><span class="date">KDD 2026 · Oral presentation</span></div>
+<div class="description"><p>I developed a reference-free, reproducible benchmark for multi-party conversation generation, with turn- and conversation-level metrics for speaker modeling, content quality, and speaker–content consistency. We benchmarked prompting- and training-based methods across 3 datasets spanning collaborative problem-solving, scripted dialogue, and real-world enterprise discussions.</p></div>
+<p class="entry-meta">ACM SIGKDD 2026, Datasets and Benchmarks Track</p>
+<div class="resource-links"><a aria-label="Paper: MPCEval: Multi-party conversation evaluation" href="https://doi.org/10.1145/3770855.3817574">Paper</a><a aria-label="Code: MPCEval: Multi-party conversation evaluation" href="https://github.com/Owen-Yang-18/MPCEval">Code</a></div>
+</article>
+<article class="entry project-entry" id="project-privacy">
+<h3>Privacy attacks and defenses</h3>
+<div class="description"><p>I studied membership-inference attacks on teacher–student pairs and proposed mitigations for privacy leakage in knowledge distillation. I also developed a temporal attack on sequential data releases using hidden Markov models and reinforcement learning. Related work examines data-buyer privacy in data markets.</p></div>
+<div class="resource-links"><a aria-label="Knowledge distillation: Privacy attacks and defenses" href="https://doi.org/10.1145/3820356.3820359">Knowledge distillation</a><a aria-label="Sequential releases: Privacy attacks and defenses" href="https://arxiv.org/abs/2510.24807">Sequential releases</a><a aria-label="Data markets: Privacy attacks and defenses" href="https://doi.org/10.1109/MIC.2024.3398626">Data markets</a></div>
+</article>
+<article class="entry project-entry" id="project-emory">
+<h3>Earlier research at Emory</h3>
+<div class="description"><p>My undergraduate research led to 3 first-author papers on spatial interpolation, multi-source self-supervision, and trajectory generation.</p></div>
+<div class="resource-links"><a aria-label="Spatial interpolation: Earlier research at Emory" href="https://doi.org/10.1145/3557915.3561008">Spatial interpolation</a><a aria-label="Spatial prediction: Earlier research at Emory" href="https://doi.org/10.1145/3605358">Spatial prediction</a><a aria-label="Trajectory generation: Earlier research at Emory" href="https://doi.org/10.1109/MDM58254.2023.00032">Trajectory generation</a></div>
+</article>
+</section>
+<section aria-labelledby="publications-title" class="cv-section" id="publications">
+<h2 id="publications-title">Publications<a aria-label="Link to Publications" class="section-anchor" href="#publications"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<p class="publication-note">* Equal contribution. My name is shown in bold. <a href="https://scholar.google.com/citations?user=1dUxfIcAAAAJ&amp;hl=en">Google Scholar</a></p>
+<h3 class="publication-group-title">Published and Accepted</h3>
+<ol aria-label="Published and accepted papers" class="publication-list" role="list">
+<li class="publication" id="pub-mpceval"><span aria-hidden="true" class="pub-number">[1]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1145/3770855.3817574">MPCEval: A Benchmark for Multi-Party Conversation Generation</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong><sup title="Equal contribution">*</sup>, Yi Yang<sup title="Equal contribution">*</sup>, Zhuofan Jia, Xuan Yang, Jian Pei, Yuchen Zang, Xingwang Deng, Xianglong Chen</p>
+<p class="publication-venue"><span class="venue-name">ACM SIGKDD</span>, <span class="pub-year">2026</span> · Datasets and Benchmarks Track; oral presentation.</p>
+<div class="resource-links"><a aria-label="Paper: MPCEval: A Benchmark for Multi-Party Conversation Generation" href="https://doi.org/10.1145/3770855.3817574">Paper</a><a aria-label="Code: MPCEval: A Benchmark for Multi-Party Conversation Generation" href="https://github.com/Owen-Yang-18/MPCEval">Code</a></div>
+</div></li><li class="publication" id="pub-generalizability"><span aria-hidden="true" class="pub-number">[2]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1145/3794858">Generalizability of Large Language Model-Based Agents: A Comprehensive Survey</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong>, Yi Yang, Roy Xie, Bhuwan Dhingra, Shuyan Zhou, Jian Pei</p>
+<p class="publication-venue"><span class="venue-name">ACM Computing Surveys</span>, <span class="pub-year">2026</span> · 58(10), Article 263, 44 pages.</p>
+<div class="resource-links"><a aria-label="Paper: Generalizability of Large Language Model-Based Agents: A Comprehensive Survey" href="https://doi.org/10.1145/3794858">Paper</a></div>
+</div></li><li class="publication" id="pub-mia"><span aria-hidden="true" class="pub-number">[3]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1145/3820356.3820359">On Membership Inference Attacks in Knowledge Distillation</a></h4></div>
+<p class="authors">Ziyao Cui<sup title="Equal contribution">*</sup>, <strong translate="no">Minxing Zhang</strong><sup title="Equal contribution">*</sup>, Jian Pei</p>
+<p class="publication-venue"><span class="venue-name">ACM SIGKDD Explorations Newsletter</span>, <span class="pub-year">2026</span> · 28(1), pp. 32–40.</p>
+<div class="resource-links"><a aria-label="Paper: On Membership Inference Attacks in Knowledge Distillation" href="https://doi.org/10.1145/3820356.3820359">Paper</a></div>
+</div></li><li class="publication" id="pub-market"><span aria-hidden="true" class="pub-number">[4]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1109/MIC.2024.3398626">Protecting Data Buyer Privacy in Data Markets</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong>, Jian Pei</p>
+<p class="publication-venue"><span class="venue-name">IEEE Internet Computing</span>, <span class="pub-year">2024</span> · 28(4), pp. 14–20.</p>
+<div class="resource-links"><a aria-label="Paper: Protecting Data Buyer Privacy in Data Markets" href="https://doi.org/10.1109/MIC.2024.3398626">Paper</a></div>
+</div></li><li class="publication" id="pub-csgan"><span aria-hidden="true" class="pub-number">[5]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1109/MDM58254.2023.00032">CSGAN: Modality-Aware Trajectory Generation via Clustering-Based Sequence GAN</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong>, Haowen Lin, Shun Takagi, Yang Cao, Cyrus Shahabi, Li Xiong</p>
+<p class="publication-venue"><span class="venue-name">IEEE MDM</span>, <span class="pub-year">2023</span> · pp. 148–157.</p>
+<div class="resource-links"><a aria-label="Paper: CSGAN: Modality-Aware Trajectory Generation via Clustering-Based Sequence GAN" href="https://doi.org/10.1109/MDM58254.2023.00032">Paper</a></div>
+</div></li><li class="publication" id="pub-spatial-prediction"><span aria-hidden="true" class="pub-number">[6]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1145/3605358">Deep Spatial Prediction via Heterogeneous Multi-Source Self-Supervision</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong>, Dazhou Yu, Yun Li, Liang Zhao</p>
+<p class="publication-venue"><span class="venue-name">ACM Transactions on Spatial Algorithms and Systems</span>, <span class="pub-year">2023</span> · 9(3).</p>
+<div class="resource-links"><a aria-label="Paper: Deep Spatial Prediction via Heterogeneous Multi-Source Self-Supervision" href="https://doi.org/10.1145/3605358">Paper</a></div>
+</div></li><li class="publication" id="pub-interpolation"><span aria-hidden="true" class="pub-number">[7]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.1145/3557915.3561008">Deep Geometric Neural Network for Spatial Interpolation</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong>, Dazhou Yu, Yun Li, Liang Zhao</p>
+<p class="publication-venue"><span class="venue-name">ACM SIGSPATIAL</span>, <span class="pub-year">2022</span> · Best Poster Runner-Up.</p>
+<div class="resource-links"><a aria-label="Paper: Deep Geometric Neural Network for Spatial Interpolation" href="https://doi.org/10.1145/3557915.3561008">Paper</a></div>
+</div></li>
+</ol>
+<h3 class="publication-group-title">Preprints</h3>
+<ol aria-label="Preprints" class="publication-list" role="list" start="8">
+<li class="publication" id="pub-person-distillation"><span aria-hidden="true" class="pub-number">[8]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://doi.org/10.20944/preprints202608.1530.v1">Person Distillation: Foundations and Principles for Personalized AI</a></h4></div>
+<p class="authors"><strong translate="no">Minxing Zhang</strong><sup title="Equal contribution">*</sup>, Yi Yang<sup title="Equal contribution">*</sup>, Jian Pei</p>
+<p class="publication-venue"><span class="venue-name">Preprints.org</span>, <span class="pub-year">2026</span> · 202608.1530.v1.</p>
+<div class="resource-links"><a aria-label="Paper: Person Distillation: Foundations and Principles for Personalized AI" href="https://doi.org/10.20944/preprints202608.1530.v1">Paper</a><a aria-label="Website: Person Distillation: Foundations and Principles for Personalized AI" href="https://person-distillation-foundations.github.io/">Website</a><a aria-label="GitHub (website source): Person Distillation: Foundations and Principles for Personalized AI" href="https://github.com/person-distillation-foundations/person-distillation-foundations.github.io">GitHub (website source)</a></div>
+</div></li><li class="publication" id="pub-sequential"><span aria-hidden="true" class="pub-number">[9]</span><div class="pub-body">
+<div class="entry-heading"><h4><a href="https://arxiv.org/abs/2510.24807">Learning to Attack: Uncovering Privacy Risks in Sequential Data Releases</a></h4></div>
+<p class="authors">Ziyao Cui<sup title="Equal contribution">*</sup>, <strong translate="no">Minxing Zhang</strong><sup title="Equal contribution">*</sup>, Jian Pei</p>
+<p class="publication-venue"><span class="venue-name">arXiv</span>, <span class="pub-year">2025</span> · 2510.24807.</p>
+<div class="resource-links"><a aria-label="Paper: Learning to Attack: Uncovering Privacy Risks in Sequential Data Releases" href="https://arxiv.org/abs/2510.24807">Paper</a></div>
+</div></li>
+</ol>
+<p class="publication-footer">The two internship papers are in submission and described under <a href="#experience">Work and Internship Experience</a>.</p>
+</section>
+<section aria-labelledby="talks-title" class="cv-section" id="talks">
+<h2 id="talks-title">Tutorials and Invited Talks<a aria-label="Link to Tutorials and Invited Talks" class="section-anchor" href="#talks"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<article class="entry talk-entry" id="talk-kdd">
+<div class="entry-heading"><h3>KDD · Tutorial Co-organizer</h3><span class="date">2026</span></div>
+<p class="talk-title">Trustworthy LLM-Based Agents for Data-Centric AI</p>
+<div class="resource-links"><a aria-label="Tutorial website: KDD · Tutorial Co-organizer" href="https://data-centric-trustworthy-llm-toturial.github.io/">Tutorial website</a></div>
+</article>
+<article class="entry talk-entry" id="talk-pakdd">
+<div class="entry-heading"><h3>PAKDD · Tutorial Co-organizer</h3><span class="date">2026</span></div>
+<p class="talk-title">Generalizability of Large Language Model-Based Agents</p>
+<div class="resource-links"><a aria-label="Program: PAKDD · Tutorial Co-organizer" href="https://www.pakdd2026.org/tutorial">Program</a></div>
+</article>
+<article class="entry talk-entry">
+<div class="entry-heading"><h3>Samsung ML Reading Group</h3><span class="date">2024</span></div>
+<p class="talk-title">Invited speaker</p>
+</article>
+</section>
+<section aria-labelledby="awards-title" class="cv-section" id="awards">
+<h2 id="awards-title">Honors and Awards<a aria-label="Link to Honors and Awards" class="section-anchor" href="#awards"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<ul class="honors-list">
+<li><span>Academic Excellence Award, Emory Computer Science</span><span class="date">2023</span></li>
+<li><span>Phi Beta Kappa, Gamma Chapter of Georgia</span><span class="date">2023</span></li>
+<li><span>Best Poster Runner-Up, ACM SIGSPATIAL</span><span class="date">2022</span></li>
+<li><span>Travel Grant, ACM SIGSPATIAL</span><span class="date">2022</span></li>
+</ul>
+</section>
+<section aria-labelledby="skills-title" class="cv-section" id="skills">
+<h2 id="skills-title">Technical Skills<a aria-label="Link to Technical Skills" class="section-anchor" href="#skills"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
+<dl class="skills-list"><dt>Languages</dt><dd>Python, Java, R, SQL</dd><dt>Research tools</dt><dd>LaTeX</dd></dl>
+</section>
+<section aria-labelledby="contact-title" class="cv-section" id="contact">
+<h2 id="contact-title">Contact<a aria-label="Link to Contact" class="section-anchor" href="#contact"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2><p class="contact-availability">For <strong>Summer or Fall 2027 internships</strong>, <strong>Spring 2028 full-time opportunities</strong>, or research collaborations, please contact me by email.</p>
+<address class="contact-address">
+<p>Email: <a href="mailto:minxing.zhang@duke.edu">minxing.zhang@duke.edu</a></p>
+<p>Phone: <a href="tel:+19843580732">+1 984-358-0732</a></p>
+<p>Durham, North Carolina, USA</p>
+</address>
+<div class="resource-links"><a aria-label="Download CV: Contact" download="Minxing_Zhang_CV.pdf" href="Minxing_Zhang_CV.pdf">Download CV</a><a aria-label="Google Scholar: Contact" href="https://scholar.google.com/citations?user=1dUxfIcAAAAJ&amp;hl=en">Google Scholar</a><a aria-label="LinkedIn: Contact" href="https://www.linkedin.com/in/minxing-zhang-3987b8255/">LinkedIn</a></div>
+</section>
+<footer class="footer"><p>© 2026 Minxing Zhang · Updated October 2026</p><a href="#about">Back to top</a></footer>
+</main>
+</div>
+<script>/* Progressive enhancement only. Links, content and hiring dates work without JS. */
+(() => {
+  'use strict';
+  const sidebar = document.querySelector('.sidebar');
+  const nav = document.querySelector('.section-nav');
+  const main = document.querySelector('main');
+  if (!sidebar || !nav || !main) return;
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+  let positions = [], documentHeight = 0, current = '', scrollFrame = 0, measureFrame = 0;
+  function setCurrent(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(link => {
+      if (link.hash === '#' + id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  function update() {
+    scrollFrame = 0;
+    let id = positions.length ? positions[0].id : 'about';
+    const y = window.scrollY + 90;
+    for (const section of positions) if (section.top <= y) id = section.id;
+    if (window.scrollY + window.innerHeight >= documentHeight - 3) {
+      // Several short sections can share the last screen. Respect the selected
+      // fragment instead of marking Contact when the reader clicked Honors/Skills.
+      const selected = positions.find(section => '#' + section.id === window.location.hash);
+      id = selected && selected.top >= window.scrollY ? selected.id : 'contact';
+    }
+    setCurrent(id);
+  }
+  function measure() {
+    measureFrame = 0;
+    const scrollY = window.scrollY;
+    positions = sections.map(section => ({id: section.id, top: section.getBoundingClientRect().top + scrollY}));
+    documentHeight = document.documentElement.scrollHeight;
+    const fits = sidebar.getBoundingClientRect().height <= window.innerHeight - 48;
+    // Read geometry above, then write attributes: avoid repeated layout reads on scroll.
+    sidebar.dataset.sticky = String(fits);
+    update();
+  }
+  function scheduleMeasure() { if (!measureFrame) measureFrame = requestAnimationFrame(measure); }
+  window.addEventListener('scroll', () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(update); }, {passive:true});
+  window.addEventListener('resize', scheduleMeasure);
+  window.addEventListener('load', scheduleMeasure);
+  window.addEventListener('pageshow', scheduleMeasure);
+  window.addEventListener('hashchange', scheduleMeasure);
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(scheduleMeasure);
+    observer.observe(sidebar);
+    observer.observe(main);
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleMeasure);
+  scheduleMeasure();
+})();</script>
+</body>
+</html>
