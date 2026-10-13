@@ -340,7 +340,7 @@ h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-he
 </aside>
 <main id="main" tabindex="-1">
 <section aria-labelledby="about-title" class="about" id="about"><h2 id="about-title">About<a aria-label="Link to About" class="section-anchor" href="#about"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"></path></svg></a></h2>
-<p>I work with <a href="https://sites.google.com/view/jpei/jian-peis-homepage">Jian Pei</a> at Duke University. My research centers on <strong>privacy, generalizability, and reliable, cost-efficient evaluation</strong> for trustworthy LLMs and AI agents.</p>
+<p>I work with Professor <a href="https://sites.google.com/view/jpei/jian-peis-homepage">Jian Pei</a> at Duke University. My research centers on <strong>privacy, generalizability, and reliable, cost-efficient evaluation</strong> for trustworthy LLMs and AI agents.</p>
 <p>My recent work explores reliable person distillation and representation, advertising for LLM agents, and question-asking LLMs.</p>
 <div aria-label="Job-search availability" class="availability">
 <p class="availability-intro">I am actively seeking:</p>
@@ -370,8 +370,8 @@ h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-he
 <p class="entry-meta">Amazon Bedrock Guardrails · Deep Engine-Science · Seattle, WA</p>
 <div class="description">
 <p>I developed <strong>Judge2Vec</strong>, an unsupervised framework that selects compact, complementary LLM juries without human labels for selection. It estimates criterion-specific competence embeddings from leave-one-family-out agreement with a family-balanced consensus on unlabeled pilot examples.</p>
-<p>Using 4 of 19 judges, Judge2Vec ranked first among evaluated methods on 8 text benchmarks. Across 4 human-rated benchmarks, mean Kendall correlation was <strong>0.467 versus 0.424</strong> for full-pool PoLL, with <strong>83.9% lower average deployment cost</strong> ($4.67 versus $28.97 per 1,000 items).</p>
-<p>I also developed budget-adaptive jury replacement and zero-shot cross-task transfer. Juries constructed without target-task examples retained 98.5% of in-domain mean Kendall correlation across 4 tasks. Evaluation also included multimodal and agentic settings.</p>
+<p>Using 4 of 19 judges, Judge2Vec ranked first among baselines on 8 text benchmarks. Average Kendall correlation was <strong>0.467 versus 0.424</strong> for full-pool aggregation, with <strong>83.9% lower average deployment cost</strong> ($4.67 versus $28.97 per 1,000 items).</p>
+<p>I also developed budget-adaptive jury replacement and zero-shot cross-task transfer. Juries constructed without target-task examples retained 98.5% performance. Evaluation also included multimodal and agentic settings.</p>
 </div>
 </article>
 <article class="entry work-entry" id="att">
@@ -380,7 +380,7 @@ h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-he
 <p class="entry-meta">Bedminster, NJ · Mentors: <a href="https://divesh.net">Divesh Srivastava</a> and <a href="https://www.linkedin.com/in/yaron-kanza-27897642/">Yaron Kanza</a></p>
 <div class="description">
 <p>I developed a kNN-LM framework for private-data question answering and <strong>selective forgetting without retraining the LLM or embedding function</strong>. The embedding design preserves accurate next-token retrieval while protecting against leakage of deleted private associations. Sensitive values are masked during embedding training; correct next tokens remain retrievable from the private database until deletion.</p>
-<p>The framework achieved <strong>73.8% answer accuracy versus 60.0%</strong> for QA-embedding RAG on paraphrased TOFU questions, evaluated against ground truth by GPT-4o-mini.</p>
+<p>The framework achieved <strong>73.8% answer accuracy versus 60.0%</strong> for RAG.</p>
 <p>I implemented FAISS retrieval and user-level logical deletion without index rebuilds. Scaling the synthetic datastore 1,000 times to <strong>19.6 million key–value pairs</strong> increased answer-generation time 4.9 times, from 1.42 to 7.01 seconds per query.</p>
 </div>
 </article>
@@ -517,7 +517,7 @@ h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-he
 </address>
 <div class="resource-links"><a aria-label="Download CV: Contact" download="Minxing_Zhang_CV.pdf" href="Minxing_Zhang_CV.pdf">Download CV</a><a aria-label="Google Scholar: Contact" href="https://scholar.google.com/citations?user=1dUxfIcAAAAJ&amp;hl=en">Google Scholar</a><a aria-label="LinkedIn: Contact" href="https://www.linkedin.com/in/minxing-zhang-3987b8255/">LinkedIn</a></div>
 </section>
-<footer class="footer"><p>© 2026 Minxing Zhang · Updated October 2026</p><a href="#about">Back to top</a></footer>
+<footer class="footer"><p>© 2026 Minxing Zhang </p><a href="#about">Back to top</a></footer>
 </main>
 </div>
 <script>/* Progressive enhancement only. Links, content and hiring dates work without JS. */
