@@ -231,7 +231,10 @@ h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-he
 .footer { margin-top: var(--space-8); padding-top: 1rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .4rem 1rem; font-size: var(--font-small); color: var(--secondary); }
 .footer a { padding-block: .3rem; }
 @media (min-width: 64rem) {
-  .sidebar[data-sticky="true"] { position: sticky; top: 1.5rem; }
+  .sidebar[data-sticky="true"] {
+  position: sticky;
+  top: var(--sidebar-sticky-top, 1.5rem);
+  }
 }
 @media (max-width: 63.999rem) {
   .wrapper { display: block; width: min(43.5rem, calc(100% - 3rem)); padding-top: 2rem; }
@@ -581,9 +584,10 @@ h3 { color: var(--text); font-size: var(--font-entry); font-weight: 700; line-he
     const scrollY = window.scrollY;
     positions = sections.map(section => ({id: section.id, top: section.getBoundingClientRect().top + scrollY}));
     documentHeight = document.documentElement.scrollHeight;
-    const fits = sidebar.getBoundingClientRect().height <= window.innerHeight - 48;
-    // Read geometry above, then write attributes: avoid repeated layout reads on scroll.
-    sidebar.dataset.sticky = String(fits);
+    const sidebarHeight = sidebar.getBoundingClientRect().height;
+    const stickyTop = Math.min(24, window.innerHeight - sidebarHeight - 24);
+    sidebar.style.setProperty('--sidebar-sticky-top', `${stickyTop}px`);
+    sidebar.dataset.sticky = 'true';
     update();
   }
   function scheduleMeasure() { if (!measureFrame) measureFrame = requestAnimationFrame(measure); }
